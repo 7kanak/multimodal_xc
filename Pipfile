@@ -12,6 +12,11 @@ torchvision = "*"
 jupyterlab = "*"
 transformers = "*"
 sentence-transformers = "*"
+fasttext = "*"
+nltk = "*"
+spacy = "*"
+cython = "*"
+xclib = {ref = "master", git = "https://github.com/kunaldahiya/pyxclib.git"}
 
 [dev-packages]
 gdown = "*"
