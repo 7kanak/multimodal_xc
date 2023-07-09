@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 import torch.nn as nn
 from transformers import AutoModel, AutoTokenizer
 import torch.nn.functional as F
@@ -50,7 +51,7 @@ class SiameseNetwork(torch.nn.Module):
         target = torch.eye(similarity.shape[0]).to(self.device)
         return similarity, target
 
-import numpy as np
+
 def predict(model: SiameseNetwork, input_document: list, all_labels: list, true_val): # todo: cache all_labels_rep
     model.eval()
     model.text_model.eval()
